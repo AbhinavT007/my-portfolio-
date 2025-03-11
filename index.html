@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <body class="starry-bg"></body>
+    <nav>
+      <a href="#objective">Objective</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+       <a href="#declaration">Declaration</a>
+    </nav>
+
+    <header>
+      <div class="header-content">
+        <img src="images/AbhiProfile.jpg" alt="Profile Picture" width="200">
+        <div class="header-text">
+          <h1>TIRUMALAKANDURI ANANTHA ABHINAV</h1>
+          <p>Business Analyst</p>
+          <p>📞 9032076875</p>
+          <p>✉ ananthaabhinav2005@gmail.com</p>
+          <div class="social-links">
+            <a href="www.linkedin.com/in/anantha-abhinav" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AbhinavT007" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="OBJECTIVE" class="content-section bg-effect">
+      <h2>Objective</h2>
+      <p>Seeking a challenging engineering role where I can apply my technical skills, communication skills and innovative mindset to contribute effectively to projects. While continuosuly learning and growing within a dynamic team environment.</p>
+    </section>
+    <section id="DESCRIPTION" class="content-section bg-effect">
+      <h2>Description</h2>
+      <p>Currently I am studying B.Tech in CSE Department. My aim is to study MBA and work as a Business Analyst.</p>
+    </section>
+
+    <section id="SKILLS" class="content-section bg-effect">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="fab fa-c"></i><p>C</p></div>
+        <div class="skill-item"><i class="fab fa-python"></i><p>Python</p></div>
+        <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
+        <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+        <div class="skill-item"><i class="fab fa-mdb"></i><p>MongoDB</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="EDUCATION" class="content-section bg-effect">
+      <h2>Education</h2>
+      <p><strong>B.Tech (CSE)</strong> - Sasi Institute of Technology and Engineering ,Tadepalligudem(2022-2026) - 8 CGPA</p>
+      <p><strong>Intermediate</strong> - Sasi JR.College, Vishakapatnam (2021-2022) - 87%</p>
+      <p><strong>High School</strong> - Sasi English High School,Tadepalligudem,(2020) - 99%</p>
+    </section>
+
+    <section id="CERTIFICATIIONS" class="content-section bg-effect">
+      <h2>Certifications</h2>
+      <div class="certificates-container">
+        <div class="certificate-card">
+          <img src="images/and.png" alt="Certificate 1">
+          <p class="certificate-description">ANDROID DEVELOPER VIRTUAL INTERNSHIP(EDUSKILLS)</p>
+        </div>
+        <div class="certificate-card">
+          <img src="images/Mach.png" alt="Certificate 2">
+          <p class="certificate-description">MACHINE LEARNING(SKILLDZIRE)</p>
+        </div>
+        <div class="certificate-card">
+          <img src="images/Juniper.png" alt="Certificate 3">
+          <p class="certificate-description">JUNIPER(JUNOS)</p>
+        </div>
+        <div class="certificate-card">
+          <img src="images/net.png" alt="Certificate 4">
+          <p class="certificate-description">NETWORKING CLOUD VIRTUAL INTERSHIP(EDUSKILLS)</p>
+        </div>
+        <div class="certificate-card">
+          <img src="images/cyber.png" alt="Certificate 5">
+          <p class="certificate-description">PRACTICAL CYBER SECURITY FOR CYBER SECURITY PRACTITIONERS(NPTEL)</p>
+        </div>
+      </div>
+      <!-- <p class="completion-text">I have successfully completed these internships.</p> -->
+    </section>
+
+     <section id="DECLARATION" class="content-section bg-effect">
+      <h2>Declaration</h2>
+      <p>I am hereby declaring that all the statements mentioned in the above resume are true,correct and complete to the nest of my knowledge and belief</p>
+    </section>
+  </section>
+
+    <footer>
+      <p>&copy; 2025 Anantha Abhinav. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".content-section");
+
+        const body = document.querySelector("body");
+for (let i = 0; i < 50; i++) {
+  const star = document.createElement("div");
+  star.classList.add("floating-star");
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.top = Math.random() * 100 + "vh";
+  body.appendChild(star);
+}
+
+        const triggerAnimation = () => {
+          sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (sectionTop < windowHeight - 100) {
+              section.classList.add("visible");
+            }
+          });
+        };
+
+        window.addEventListener("scroll", triggerAnimation);
+        triggerAnimation();
+      });
+    </script>
+  </body>
+</html>

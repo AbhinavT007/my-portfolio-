@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #6eb4aeae, #485460);
+    color: #241e1e;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(34, 55, 71, 0.895);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #555;
+}
+
+nav a {
+    color: #ECF0F1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    color: #000504;
+    background-color: rgba(26, 188, 156, 0.1);
+    border-radius: 5px;
+}
+
+/* Header */  
+header {  
+    text-align: center;  
+    padding: 60px 20px;  
+    background: linear-gradient(to right, #9aa3ab, #476c64b7); /* Changed to a lighter gradient */  
+    color: #333; /* Updated text color */  
+}  
+
+/* Header Content */  
+.header-content {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    gap: 30px;  
+    flex-wrap: wrap;  
+    max-width: 900px;  
+    margin: auto;  
+}  
+
+.profile-img {  
+    width: 320px;  
+    height: 250px;  
+    border-radius: 12px;  
+    border: 3px solid #E74C3C; /* Keep the existing border */  
+    object-fit: cover;  
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);  
+}  
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a {
+    margin: 0 12px;
+    color: #263ab0;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #060505;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #1ABC9C;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #16A085;
+    box-shadow: 0 0 15px rgba(26, 188, 156, 0.5);
+}
+
+/* Section Styles */
+.content-section {
+    padding: 50px 30px;
+    margin: 30px auto;
+    border-radius: 12px;
+    background-color: rgba(179, 196, 209, 0.482);
+    box-shadow: 0 4px 12px rgba(17, 16, 16, 0.2);
+    max-width: 1000px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    text-align: center;
+    width: 120px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.skill-item i {
+    font-size: 3rem;
+    color: #0d0d0e;
+    transition: text-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.15);
+    color: #060100e1;
+}
+
+.skill-item:hover i {
+    text-shadow: 0 0 15px rgba(6, 1, 0, 0.7), 0 0 30px rgba(6, 1, 0, 0.5);
+}
+
+/* Certifications Section */
+.certificates-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(212, 228, 239, 0.9);
+    padding: 10px;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    max-width: 350px; /* Max width for large certificates */
+    border-radius: 8px;
+    border: 2px solid #e9eae9;
+}
+
+.certificate-card.landscape {
+    width: 380px; /* Decreased width for landscape certificates */
+}
+
+.certificate-card.portrait {
+    width: 300px; /* Adjust width for portrait certificates */
+}
+
+.certificate-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.5);
+}
+
+.certificate-description {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* JavaScript required to apply classes dynamically based on image aspect ratio */
+/* Projects Section */
+.projects-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.project-card {
+    width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(30, 39, 46, 0.9);
+    padding: 15px;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #1ABC9C;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(26, 188, 156, 0.5);
+}
