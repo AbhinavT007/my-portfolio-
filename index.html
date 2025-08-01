@@ -123,28 +123,35 @@
         </div>
       </div>
     </section>
-
-   <section id="projects" class="content-section bg-effect">
+<section id="projects" class="content-section bg-effect">
   <h2>Projects</h2>
   <div class="projects-container">
-    <div class="project-card">
-      <h3>Crypto Tracker</h3>
-      <p>Real-time crypto price tracker using React & Redux Toolkit.</p>
-      <!-- GitHub Link as a separate button or link -->
-      <a href="https://github.com/AbhinavT007/realtime-crypto-tracker" target="_blank">
-        <i class="fab fa-github"></i> GitHub Link
-      </a>
-      <!-- Video Demo as a separate section below the link -->
-      <div class="project-video" style="margin-top:10px;">
+    <div class="project-card" style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+      
+      <!-- Left side: Description and GitHub Link -->
+      <div class="project-info" style="flex: 1; min-width: 280px;">
+        <h3>Crypto Tracker</h3>
+        <p>
+          Real-time crypto price tracker using React & Redux Toolkit.
+        </p>
+        <a href="https://github.com/AbhinavT007/realtime-crypto-tracker" target="_blank" style="font-weight: bold; text-decoration: none; color: #0077b5;">
+          <i class="fab fa-github"></i> GitHub Link
+        </a>
+      </div>
+
+      <!-- Right side: Video -->
+      <div class="project-video" style="flex: 1; min-width: 280px;">
         <video width="100%" height="auto" controls>
           <source src="videos/crypto-tracker-demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <!-- Or embed from YouTube: 
+        <!-- Or if YouTube embed, replace with iframe: -->
+        <!--
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
           title="Crypto Tracker Demo" frameborder="0" allowfullscreen></iframe>
         -->
       </div>
+
     </div>
   </div>
 </section>
