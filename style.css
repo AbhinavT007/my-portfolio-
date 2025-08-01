@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
@@ -61,8 +62,6 @@ header {
     border: 4px solid #e6b400;
     background: #222123;
 }
-
-
 .profile-img:hover { transform: scale(1.04);}
 .header-text { max-width: 480px; }
 .header-text h1 {
@@ -109,6 +108,13 @@ header {
     border-bottom: 2.5px solid #ffd700;
     padding-bottom: 8px;
 }
+
+/* Objective and Education sections text italic */
+#objective p,
+#education p {
+    font-style: italic;
+}
+
 .skills-grid {
     display: flex;
     gap: 30px;
@@ -256,7 +262,7 @@ header {
     margin: 0 auto;
     font-size: 1.15rem;
     line-height: 1.6;
-    color: #e8ca91;
+    color: #fff !important;
     font-style: italic;
 }
 footer {
