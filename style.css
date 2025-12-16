@@ -1,6 +1,4 @@
-/* =========================
-   GENERAL STYLES
-========================= */
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
@@ -18,9 +16,7 @@ a {
 }
 a:hover { color: #ffd700; }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 nav {
     background: #161616f2;
     padding: 1rem 3rem;
@@ -32,6 +28,7 @@ nav {
     gap: 2.5rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     border-bottom: 2px solid #e6b400;
+    font-size: 1rem;
 }
 nav a {
     color: #f5f5f5;
@@ -43,21 +40,20 @@ nav a:hover {
     background: #e6b400;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 header {
     background: linear-gradient(90deg, #282320 60%, #161616 100%);
     padding: 4rem 2rem 5rem;
     text-align: center;
+    margin-bottom: 3rem;
 }
 .header-content {
     max-width: 950px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     gap: 3rem;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .profile-img {
     width: 290px;
@@ -68,31 +64,14 @@ header {
 }
 .profile-img:hover { transform: scale(1.04); }
 
-.header-text h1 {
-    font-size: 2.8rem;
-    color: #ffe179;
-}
-.header-text p {
-    font-size: 1.1rem;
-    color: #f4d185;
-}
-
-.social-links a {
-    margin: 0 15px;
-    color: #ffd700;
-    font-size: 2.2rem;
-}
-
-/* =========================
-   SECTIONS
-========================= */
+/* CONTENT SECTIONS */
 .content-section {
     padding: 3rem 2rem 3.5rem;
-    margin: 0 auto 3rem;
-    max-width: 960px;
-    background: rgba(35, 33, 31, 0.96);
+    margin: 0 auto 3.2rem;
     border-radius: 15px;
+    background: rgba(35, 33, 31, 0.96);
     box-shadow: 0 8px 28px rgba(0,0,0,0.11);
+    max-width: 960px;
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.6s;
@@ -107,14 +86,13 @@ header {
     padding-bottom: 8px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* PROJECTS */
 .projects-container {
     display: flex;
-    gap: 30px;
+    gap: 80px; /* 🔑 prevents overlap between floating videos */
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 /* PROJECT CARD */
@@ -123,67 +101,72 @@ header {
     border-radius: 16px;
     box-shadow: 0 8px 20px #facd357c;
     width: 340px;
-    padding: 22px 28px;
+    padding: 28px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    transition: box-shadow 0.27s, transform 0.27s;
-    user-select: none;
-
-    /* 🔑 IMPORTANT: allow floating video */
-    overflow: visible;
     position: relative;
+
+    /* 🔑 allow floating video */
+    overflow: visible;
 }
 .project-card:hover {
     box-shadow: 0 12px 32px #ffe20056;
     transform: translateY(-6px);
 }
 
-/* SIDE-BY-SIDE LAYOUT */
+/* SIDE BY SIDE */
 .project-card.flex {
     flex-direction: row;
     gap: 2rem;
 }
 
+/* TEXT CENTERED */
 .project-info {
     flex: 1;
+    text-align: center;
     z-index: 1;
-    position: relative;
 }
-
 .project-info h3 {
     color: #ffd700;
-    text-align: center;
 }
 .project-info p,
 .project-info ul {
     color: #fde8b8;
 }
 
-/* =========================
-   FLOATING VIDEO (KEY PART)
-========================= */
+/* 🔥 FLOATING VIDEO */
 .project-video {
     flex: 1;
     position: relative;
     z-index: 2;
 }
 
-/* Floating look (original behavior) */
+/* INCREASE VIDEO SIZE */
 .project-video video {
-    width: 100%;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px #ffd90055;
+    width: 130%;             /* 🔑 larger than card */
+    max-width: 420px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px #ffd90066;
     transition: transform 0.25s;
 }
 
-/* Subtle hover without overlap */
-.project-video video:hover {
-    transform: scale(1.03);
+/* FLOAT OUTSIDE CARD */
+.project-card.flex .project-video video {
+    transform: translateX(-25px);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* CHAT APP FLOAT RIGHT */
+.project-card.flex:nth-child(2) .project-video video {
+    transform: translateX(25px);
+}
+
+/* HOVER */
+.project-video video:hover {
+    transform: scale(1.05) translateX(0);
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 2rem;
@@ -192,24 +175,13 @@ footer {
     border-top: 1px solid #e6b400;
 }
 
-/* =========================
-   SCROLLBAR
-========================= */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb {
-    background-color: #e6b400;
-    border-radius: 5px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .project-card.flex {
         flex-direction: column;
     }
-    .profile-img {
-        width: 190px;
-        height: 120px;
+    .project-video video {
+        width: 100%;
+        transform: none !important;
     }
 }
