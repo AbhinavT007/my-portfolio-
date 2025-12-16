@@ -57,7 +57,7 @@ header {
 .profile-img {
     width: 290px;
     height: 290px;
-    border-radius: 16px;   /* rounded corners, not full circle */
+    border-radius: 16px;
     object-fit: contain;
     border: 4px solid #e6b400;
     background: #222123;
@@ -142,6 +142,7 @@ header {
     text-shadow: 0 0 14px #e6b400b4;
 }
 .skill-item p { margin-top: 10px; font-weight: 600; font-size: 1rem; color: #ffe179;}
+
 .certificates-container {
     display: flex;
     flex-wrap: wrap;
@@ -184,6 +185,7 @@ header {
     letter-spacing: 0.01em;
     user-select: none;
 }
+
 .projects-container {
     display: flex;
     gap: 30px;
@@ -235,6 +237,7 @@ header {
     transition: color 0.27s;
 }
 .project-card a:hover, .project-info a:hover {color: #ffd700;}
+
 .project-video video,
 .project-video iframe {
     width: 100%;
@@ -242,9 +245,11 @@ header {
     box-shadow: 0 6px 20px #ffd90033;
     transition: transform 0.22s;
 }
-.project-video video:hover, .project-video iframe:hover {
+.project-video video:hover,
+.project-video iframe:hover {
     transform: scale(1.03);
 }
+
 /* Side-by-side for project card */
 .project-card.flex {
     flex-direction: row;
@@ -256,6 +261,7 @@ header {
     min-width: 280px;
 }
 .project-info h3 { margin-top: 0; }
+
 /* Declaration Section */
 #declaration p {
     max-width: 720px;
@@ -274,10 +280,12 @@ footer {
     border-top: 1px solid #e6b400;
     user-select: none;
 }
+
 /* Scrollbar Customization */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track {background: transparent;}
 ::-webkit-scrollbar-thumb {background-color: #e6b400; border-radius: 5px;}
+
 /* Responsive */
 @media (max-width: 992px) { .header-content { gap: 2rem; } }
 @media (max-width: 768px) {
@@ -289,4 +297,12 @@ footer {
 @media (max-width: 480px) {
     nav { font-size: 0.97rem; gap: 1rem; }
     .profile-img { width: 110px; height: 82px;}
+}
+
+/* ===== FIX: prevent project video from overlapping other project cards ===== */
+.project-card {
+    overflow: hidden;
+}
+.project-video {
+    position: relative;
 }
