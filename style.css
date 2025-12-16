@@ -66,32 +66,54 @@ header {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 22px;
 }
 .skill-item {
   background: #2a2a2a;
-  padding: 12px 16px;
-  border-radius: 10px;
+  padding: 14px 20px;
+  border-radius: 14px;
   border: 1px solid #e6b400;
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(230,180,0,0.75);
 }
 .skill-item i {
   color: #ffd700;
+  font-size: 1.1rem;
 }
 
 /* CERTIFICATES */
 .certificates-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 20px;
 }
 .certificate-card {
   background: #242424;
-  padding: 15px;
-  border-radius: 12px;
+  padding: 16px;
+  border-radius: 14px;
   border: 1px solid #e6b400;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certificate-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 22px rgba(230,180,0,0.7);
+}
+.certificate-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255,215,0,0.9);
 }
 
 /* PROJECTS */
