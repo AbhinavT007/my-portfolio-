@@ -1,177 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tirumalakanduri Anantha Abhinav - Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  </head>
-  <body class="starry-bg">
-    <nav>
-      <a href="#objective">Objective</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#certifications&internships">Certifications&Internships</a>
-      <a href="#projects">Projects</a>
-      <a href="#declaration">Declaration</a>
-    </nav>
-    <header>
-      <div class="header-content">
-        <img
-          src="images/AbhiProfile.jpg"
-          alt="Profile Picture of Tirumalakanduri Anantha Abhinav"
-          class="profile-img"
-        />
-        <div class="header-text">
-          <h1>TIRUMALAKANDURI ANANTHA ABHINAV</h1>
-          <p>B.Tech Student</p>
-          <p>📞 9032076875</p>
-          <p>✉ ananthaabhinav2005@gmail.com</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/anantha-abhinav/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/AbhinavT007" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section id="objective" class="content-section bg-effect">
-      <h2>Objective</h2>
-      <p>
-        Seeking a challenging engineering role where I can apply my technical
-        skills, communication skills, and innovative mindset to contribute
-        effectively to projects, while continuously learning and growing within a dynamic team environment.
-      </p>
-    </section>
-    <section id="skills" class="content-section bg-effect">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item"><i class="fab fa-c"></i><p>C</p></div>
-        <div class="skill-item"><i class="fab fa-python"></i><p>Python</p></div>
-        <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
-        <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
-        <div class="skill-item"><i class="fab fa-mdb"></i><p>MongoDB</p></div>
-        <div class="skill-item"><i class="fa fa-shield-alt"></i><p>Basics in CyberSecurity</p></div>
-      </div>
-    </section>
-    <section id="education" class="content-section bg-effect">
-      <h2>Education</h2>
-      <p><strong>B.Tech (CSE)</strong> - Sasi Institute of Technology and Engineering, Tadepalligudem (2022-2026) - 8 CGPA</p>
-      <p><strong>Intermediate</strong> - Sasi JR. College, Vishakapatnam (2021-2022) - 87%</p>
-      <p><strong>High School</strong> - Sasi English High School, Tadepalligudem (2020) - 99%</p>
-    </section>
-    <section id="certifications" class="content-section bg-effect">
-      <h2>Certifications&Internships</h2>
-      <div class="certificates-container">
-        <div class="certificate-card">
-          <img src="images/and.png" alt="Android Developer Virtual Internship"/>
-          <p class="certificate-description">ANDROID DEVELOPER VIRTUAL INTERNSHIP (EDUSKILLS)</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/Mach.png" alt="Machine Learning Certificate"/>
-          <p class="certificate-description">MACHINE LEARNING (SKILLDZIRE)</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/Juniper.png" alt="Juniper (JUNOS) Certificate"/>
-          <p class="certificate-description">JUNIPER (JUNOS)</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/net.png" alt="Networking Cloud Virtual Internship"/>
-          <p class="certificate-description">NETWORKING CLOUD VIRTUAL INTERNSHIP (EDUSKILLS)</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/cyber.png" alt="Practical Cyber Security"/>
-          <p class="certificate-description">PRACTICAL CYBER SECURITY FOR PRACTITIONERS (NPTEL)</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/start.png.png" alt="ISRO START"/>
-          <p class="certificate-description">ISRO - Space Science and Technology Awareness Training</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/DevOps.png" alt="DevOps Workshop"/>
-          <p class="certificate-description">Five Days Hands-on Workshop on Modern DevOps Practices – Sasi Institute of Technology & Engineering</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/ey.png" alt="AI Skills Passport"/>
-          <p class="certificate-description">AI Skills Passport – EY and Microsoft</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/Use Generative AI for Software Development .png" alt="Generative AI IBM"/>
-          <p class="certificate-description">Use Generative AI for Software Development – IBM SkillsBuild</p>
-        </div>
-        <div class="certificate-card">
-          <img src="images/nit.png" alt="Internship at NIT TIRUCHIRAPPALLI"/>
-          <p class="certificate-description">Internship with a prime focus on DevOps – NIT  TIRUCHIRAPPALLI</p>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="content-section bg-effect">
-      <h2>Projects</h2>
-      <div class="projects-container">
-        <div class="project-card flex">
-          <div class="project-info">
-            <h3>Crypto Tracker</h3>
-            <p>
-              A real-time cryptocurrency price tracker built with React and Redux Toolkit. Displays a color-coded table of Bitcoin, Ethereum, Tether, Cardano, and Ripple with live simulated price updates, percentage changes, volume, and interactive price charts.
-            </p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-              <li>Responsive design for all devices</li>
-              <li>State management with Redux Toolkit</li>
-              <li>Percentage change highlights, 7-day trend charts</li>
-              <li>Modern, intuitive interface</li>
-              <li>Tech: React, Redux Toolkit, CSS</li>
-            </ul>
-            <a href="https://github.com/AbhinavT007/realtime-crypto-tracker" target="_blank">
-              <i class="fab fa-github"></i> GitHub Link
-            </a>
-          </div>
-          <div class="project-video">
-            <video width="100%" height="auto" controls>
-              <source src="realtimecryptotracker.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="declaration" class="content-section bg-effect">
-      <h2>Declaration</h2>
-      <p>
-        I hereby declare that all the statements mentioned in the above resume are true, correct, and complete to the best of my knowledge and belief.
-      </p>
-    </section>
-    <footer>
-      <p>&copy; 2025 Anantha Abhinav. All Rights Reserved.</p>
-    </footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const sections = document.querySelectorAll(".content-section");
-        const body = document.body;
-        for (let i = 0; i < 50; i++) {
-          const star = document.createElement("div");
-          star.classList.add("floating-star");
-          star.style.left = Math.random() * 100 + "vw";
-          star.style.top = Math.random() * 100 + "vh";
-          body.appendChild(star);
-        }
-        const triggerAnimation = () => {
-          sections.forEach((section) => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (sectionTop < windowHeight - 100) {
-              section.classList.add("visible");
-            }
-          });
-        };
-        window.addEventListener("scroll", triggerAnimation);
-        triggerAnimation();
-      });
-    </script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tirumalakanduri Anantha Abhinav - Portfolio</title>
 
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#objective">Objective</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#declaration">Declaration</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <img src="images/AbhiProfile.jpg" class="profile-img" alt="Profile" />
+
+      <div class="header-text">
+        <h1>TIRUMALAKANDURI ANANTHA ABHINAV</h1>
+        <p>B.Tech Student</p>
+        <p>📞 9032076875</p>
+        <p>✉ ananthaabhinav2005@gmail.com</p>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/anantha-abhinav/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AbhinavT007" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- OBJECTIVE -->
+  <section id="objective" class="content-section">
+    <h2>Objective</h2>
+    <p>
+      Seeking a challenging engineering role where I can apply my technical
+      skills and continuously grow in a dynamic environment.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="content-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">C</div>
+      <div class="skill-item">Python</div>
+      <div class="skill-item">HTML</div>
+      <div class="skill-item">CSS</div>
+      <div class="skill-item">MongoDB</div>
+      <div class="skill-item">Cyber Security (Basics)</div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="content-section">
+    <h2>Education</h2>
+    <p><strong>B.Tech (CSE)</strong> – Sasi Institute (2022–2026) – 8 CGPA</p>
+    <p><strong>Intermediate</strong> – Sasi Jr College – 87%</p>
+    <p><strong>School</strong> – Sasi English High School – 99%</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="content-section">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+      <!-- CRYPTO TRACKER -->
+      <div class="project-card">
+        <h3>Crypto Tracker</h3>
+        <p>
+          Real-time cryptocurrency tracker built using React and Redux Toolkit.
+        </p>
+
+        <ul>
+          <li>Live simulated price updates</li>
+          <li>Redux Toolkit state management</li>
+          <li>Responsive UI</li>
+        </ul>
+
+        <video controls>
+          <source src="realtimecryptotracker.mp4" type="video/mp4" />
+        </video>
+
+        <a href="https://github.com/AbhinavT007/realtime-crypto-tracker" target="_blank">
+          GitHub Link
+        </a>
+      </div>
+
+      <!-- CHAT APPLICATION -->
+      <div class="project-card">
+        <h3>Chat Application</h3>
+        <p>
+          A real-time chat application with secure messaging and authentication.
+        </p>
+
+        <ul>
+          <li>Real-time messaging</li>
+          <li>User authentication</li>
+          <li>Clean UI</li>
+        </ul>
+
+        <video controls>
+          <source src="chatapp.mp4" type="video/mp4" />
+        </video>
+
+        <a href="https://github.com/AbhinavT007" target="_blank">
+          GitHub Link
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DECLARATION -->
+  <section id="declaration" class="content-section">
+    <h2>Declaration</h2>
+    <p>
+      I hereby declare that the information provided above is true to the best
+      of my knowledge.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Anantha Abhinav. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
