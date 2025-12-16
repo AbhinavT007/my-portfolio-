@@ -1,6 +1,4 @@
-/* =======================
-   GENERAL STYLES
-======================= */
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
@@ -9,7 +7,6 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-
 a {
     color: #e6b400;
     text-decoration: none;
@@ -17,10 +14,6 @@ a {
     transition: color 0.3s;
 }
 a:hover { color: #ffd700; }
-
-/* =======================
-   NAVBAR
-======================= */
 nav {
     background: #161616f2;
     padding: 1rem 3rem;
@@ -32,50 +25,71 @@ nav {
     gap: 2.5rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     border-bottom: 2px solid #e6b400;
+    font-size: 1rem;
 }
 nav a {
     color: #f5f5f5;
     padding: 10px 15px;
     border-radius: 5px;
+    background: transparent;
 }
 nav a:hover {
     color: #161616;
     background: #e6b400;
 }
-
-/* =======================
-   HEADER
-======================= */
 header {
     background: linear-gradient(90deg, #282320 60%, #161616 100%);
-    padding: 4rem 2rem 5rem;
+    padding: 4rem 2rem 5rem 2rem;
     text-align: center;
+    color: #fff1d6;
+    box-shadow: 0 6px 15px #00000018;
     margin-bottom: 3rem;
 }
 .header-content {
     max-width: 950px;
     margin: 0 auto;
     display: flex;
-    gap: 3rem;
+    align-items: center;
     justify-content: center;
+    gap: 3rem;
     flex-wrap: wrap;
 }
 .profile-img {
     width: 290px;
     height: 290px;
-    border-radius: 16px;
+    border-radius: 16px;   /* rounded corners, not full circle */
     object-fit: contain;
     border: 4px solid #e6b400;
     background: #222123;
 }
-.profile-img:hover { transform: scale(1.04); }
-
-/* =======================
-   CONTENT SECTIONS
-======================= */
+.profile-img:hover { transform: scale(1.04);}
+.header-text { max-width: 480px; }
+.header-text h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: #ffe179;
+    text-shadow: 1px 2px 10px #19191916;
+}
+.header-text p {
+    margin: 0.3rem 0;
+    font-weight: 500;
+    font-size: 1.12rem;
+    color: #f4d185;
+}
+.social-links { margin-top: 1.5rem; }
+.social-links a {
+    margin: 0 15px;
+    color: #ffd700;
+    font-size: 2.2rem;
+    transition: color 0.27s;
+}
+.social-links a:hover { color: #e6b400; }
 .content-section {
-    padding: 3rem 2rem 3.5rem;
-    margin: 0 auto 3.2rem;
+    padding: 3rem 2rem 3.5rem 2rem;
+    margin: 0 auto 3.2rem auto;
     border-radius: 15px;
     background: rgba(35, 33, 31, 0.96);
     box-shadow: 0 8px 28px rgba(0,0,0,0.11);
@@ -84,143 +98,196 @@ header {
     transform: translateY(40px);
     transition: all 0.6s;
 }
-.content-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.content-section.visible { opacity: 1; transform: translateY(0);}
 .content-section h2 {
     font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
     color: #e6b400;
+    letter-spacing: 1.2px;
     border-bottom: 2.5px solid #ffd700;
     padding-bottom: 8px;
 }
 
-/* =======================
-   PROJECTS CONTAINER
-======================= */
+/* Objective and Education sections text italic */
+#objective p,
+#education p {
+    font-style: italic;
+}
+
+.skills-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.skill-item {
+    text-align: center;
+    width: 130px;
+    transition: transform 0.22s;
+    cursor: default;
+}
+.skill-item i {
+    font-size: 3.3rem;
+    color: #ffe663;
+    transition: text-shadow 0.3s, color 0.27s;
+}
+.skill-item:hover {
+    transform: scale(1.18);
+    color: #ffd700;
+}
+.skill-item:hover i {
+    color: #e6b400;
+    text-shadow: 0 0 14px #e6b400b4;
+}
+.skill-item p { margin-top: 10px; font-weight: 600; font-size: 1rem; color: #ffe179;}
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.certificate-card {
+    background: rgba(22,22,22,0.20);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 340px;
+    flex: 1 1 300px;
+    box-shadow: 0 6px 20px #ffd90011;
+    transition: transform 0.22s, box-shadow 0.22s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 16px;
+}
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 13px;
+    border: 2px solid #e6b400;
+    box-shadow: 0 3px 8px #a6842e3d;
+    transition: transform 0.2s;
+}
+.certificate-card:hover {
+    transform: translateY(-7px) scale(1.045);
+    box-shadow: 0 10px 35px #ffd90048;
+}
+.certificate-card:hover img { transform: scale(1.045);}
+.certificate-description {
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #ffe179;
+    letter-spacing: 0.01em;
+    user-select: none;
+}
 .projects-container {
     display: flex;
+    gap: 30px;
     justify-content: center;
-    gap: 180px; /* prevents overlap between floating videos */
     flex-wrap: wrap;
     margin-top: 2rem;
 }
-
-/* =======================
-   PROJECT CARD
-======================= */
 .project-card {
     background: rgba(33, 28, 24, 0.86);
     border-radius: 16px;
     box-shadow: 0 8px 20px #facd357c;
     width: 340px;
-    min-height: 460px;
-    padding: 48px 28px;
-    position: relative;
-    overflow: visible;
+    padding: 22px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: box-shadow 0.27s, transform 0.27s;
+    user-select: none;
 }
 .project-card:hover {
     box-shadow: 0 12px 32px #ffe20056;
     transform: translateY(-6px);
 }
-
-/* =======================
-   CENTER TEXT (PRIORITY)
-======================= */
-.project-info {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* vertical center */
-    align-items: center;       /* horizontal center */
-    text-align: center;
-    position: relative;
-    z-index: 10;               /* ALWAYS above video */
-}
-.project-info h3 {
+.project-card h3 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
     color: #ffd700;
-    margin-bottom: 0.8rem;
+    text-align: center;
 }
-.project-info p,
-.project-info ul {
+.project-card p {
+    font-size: 1rem;
+    color: #e8ca91;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 1.45;
+}
+.project-card ul {
     color: #fde8b8;
+    margin: 0 0 1em 1.4em;
+    font-size: 0.97rem;
 }
-
-/* =======================
-   FLOATING VIDEO
-======================= */
-.project-video {
-    position: absolute;
-    bottom: -80px;  /* keeps video away from text */
-    z-index: 1;     /* below text */
+.project-card a, .project-info a {
+    font-weight: 700;
+    font-size: 1.08rem;
+    color: #e6b400;
+    text-decoration: none;
+    align-self: center;
+    transition: color 0.27s;
 }
-
-/* Bigger but controlled video */
-.project-video video {
-    width: 260px;
-    border-radius: 16px;
-    box-shadow: 0 14px 40px #ffd90066;
-    transition: transform 0.3s;
+.project-card a:hover, .project-info a:hover {color: #ffd700;}
+.project-video video,
+.project-video iframe {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px #ffd90033;
+    transition: transform 0.22s;
 }
-
-/* Hover animation */
-.project-video video:hover {
-    transform: scale(1.06);
+.project-video video:hover, .project-video iframe:hover {
+    transform: scale(1.03);
 }
-
-/* =======================
-   VIDEO POSITIONING
-======================= */
-/* Crypto Tracker → LEFT */
-.project-card:nth-child(1) .project-video {
-    left: -150px;
+/* Side-by-side for project card */
+.project-card.flex {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1.2rem 1.5rem;
 }
-
-/* Chat Application → RIGHT */
-.project-card:nth-child(2) .project-video {
-    right: -150px;
+.project-info, .project-video {
+    flex: 1;
+    min-width: 280px;
 }
-
-/* =======================
-   FOOTER
-======================= */
+.project-info h3 { margin-top: 0; }
+/* Declaration Section */
+#declaration p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #fff !important;
+    font-style: italic;
+}
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
     color: #ffe179;
     background: #1e1a17df;
     border-top: 1px solid #e6b400;
+    user-select: none;
 }
-
-/* =======================
-   SCROLLBAR
-======================= */
+/* Scrollbar Customization */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb {
-    background-color: #e6b400;
-    border-radius: 5px;
-}
-
-/* =======================
-   RESPONSIVE (MOBILE)
-======================= */
+::-webkit-scrollbar-track {background: transparent;}
+::-webkit-scrollbar-thumb {background-color: #e6b400; border-radius: 5px;}
+/* Responsive */
+@media (max-width: 992px) { .header-content { gap: 2rem; } }
 @media (max-width: 768px) {
-    .projects-container {
-        gap: 40px;
-    }
-
-    .project-video {
-        position: static;
-        margin-top: 20px;
-    }
-
-    .project-video video {
-        width: 100%;
-    }
-
-    .project-card {
-        min-height: auto;
-        padding: 28px;
-    }
+    nav { padding: 10px 20px; gap: 1.6rem; }
+    .header-content { flex-direction: column; gap: 2rem; }
+    .profile-img { width: 190px; height: 120px;}
+    .project-card.flex { flex-direction: column;}
 }
+@media (max-width: 480px) {
+    nav { font-size: 0.97rem; gap: 1rem; }
+    .profile-img { width: 110px; height: 82px;}
+}
+this is style.css of my portofolio . Make sure my request gets completed without any disturbing the remaining code.
