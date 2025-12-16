@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tirumalakanduri Anantha Abhinav - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -35,10 +34,7 @@
           <p>📞 9032076875</p>
           <p>✉ ananthaabhinav2005@gmail.com</p>
           <div class="social-links">
-            <a
-              href="https://www.linkedin.com/in/anantha-abhinav/"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/anantha-abhinav/" target="_blank">
               <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://github.com/AbhinavT007" target="_blank">
@@ -49,100 +45,48 @@
       </div>
     </header>
 
-    <section id="objective" class="content-section bg-effect">
-      <h2>Objective</h2>
-      <p>
-        Seeking a challenging engineering role where I can apply my technical
-        skills, communication skills, and innovative mindset to contribute
-        effectively to projects, while continuously learning and growing within
-        a dynamic team environment.
-      </p>
-    </section>
-
-    <section id="skills" class="content-section bg-effect">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item"><i class="fab fa-c"></i><p>C</p></div>
-        <div class="skill-item"><i class="fab fa-python"></i><p>Python</p></div>
-        <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
-        <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
-        <div class="skill-item"><i class="fab fa-mdb"></i><p>MongoDB</p></div>
-        <div class="skill-item">
-          <i class="fa fa-shield-alt"></i>
-          <p>Basics in CyberSecurity</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="content-section bg-effect">
-      <h2>Education</h2>
-      <p>
-        <strong>B.Tech (CSE)</strong> - Sasi Institute of Technology and
-        Engineering, Tadepalligudem (2022-2026) - 8 CGPA
-      </p>
-      <p>
-        <strong>Intermediate</strong> - Sasi JR. College, Vishakapatnam
-        (2021-2022) - 87%
-      </p>
-      <p>
-        <strong>High School</strong> - Sasi English High School,
-        Tadepalligudem (2020) - 99%
-      </p>
-    </section>
-
-    <section id="certifications" class="content-section bg-effect">
-      <h2>Certifications&Internships</h2>
-      <div class="certificates-container">
-        <!-- unchanged certificates -->
-      </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS -->
     <section id="projects" class="content-section bg-effect">
       <h2>Projects</h2>
+
       <div class="projects-container">
 
-        <!-- PROJECT 1 : CRYPTO TRACKER -->
+        <!-- PROJECT 1: CRYPTO TRACKER -->
         <div class="project-card flex">
           <div class="project-info">
             <h3>Crypto Tracker</h3>
             <p>
-              A real-time cryptocurrency price tracker built with React and
-              Redux Toolkit. Displays a color-coded table of Bitcoin,
-              Ethereum, Tether, Cardano, and Ripple with live simulated price
-              updates.
+              A real-time cryptocurrency price tracker built with React and Redux Toolkit.
+              Displays live simulated price updates.
             </p>
+
             <p><strong>Key Features:</strong></p>
             <ul>
-              <li>Responsive design for all devices</li>
-              <li>State management with Redux Toolkit</li>
+              <li>Responsive design</li>
+              <li>Redux Toolkit state management</li>
               <li>7-day trend charts</li>
               <li>Modern UI</li>
-              <li>Tech: React, Redux Toolkit, CSS</li>
             </ul>
-            <a
-              href="https://github.com/AbhinavT007/realtime-crypto-tracker"
-              target="_blank"
-            >
+
+            <a href="https://github.com/AbhinavT007/realtime-crypto-tracker" target="_blank">
               <i class="fab fa-github"></i> GitHub Link
             </a>
           </div>
 
           <div class="project-video">
-            <video width="100%" controls>
+            <video controls>
               <source src="realtimecryptotracker.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
 
-        <!-- PROJECT 2 : CHAT APPLICATION -->
+        <!-- PROJECT 2: CHAT APPLICATION (VIDEO ADDED) -->
         <div class="project-card flex">
           <div class="project-info">
             <h3>Chat Application</h3>
             <p>
-              A real-time chat application that enables users to communicate
-              instantly with secure message handling and a clean user
-              interface.
+              A real-time chat application that enables users to communicate instantly
+              with secure message handling and a clean user interface.
             </p>
 
             <p><strong>Key Features:</strong></p>
@@ -154,31 +98,20 @@
               <li>Tech: HTML, CSS, JavaScript, Backend APIs</li>
             </ul>
 
-            <a
-              href="https://github.com/AbhinavT007"
-              target="_blank"
-            >
+            <a href="https://github.com/AbhinavT007" target="_blank">
               <i class="fab fa-github"></i> GitHub Link
             </a>
           </div>
 
-          <!-- SCREENSHOTS -->
+          <!-- CHAT APP VIDEO -->
           <div class="project-video">
-            <img src="images/chatapp1.png" alt="Chat App 1" width="100%" />
-            <img src="images/chat2.png" alt="Chat App Screenshot 2" width="100%" />
-            <img src="images/chat3.png" alt="Chat App Screenshot 3" width="100%" />
+            <video controls>
+              <source src="chatapp.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
 
       </div>
-    </section>
-
-    <section id="declaration" class="content-section bg-effect">
-      <h2>Declaration</h2>
-      <p>
-        I hereby declare that all the statements mentioned in the above resume
-        are true, correct, and complete to the best of my knowledge and belief.
-      </p>
     </section>
 
     <footer>
@@ -188,20 +121,10 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const sections = document.querySelectorAll(".content-section");
-        const body = document.body;
-
-        for (let i = 0; i < 50; i++) {
-          const star = document.createElement("div");
-          star.classList.add("floating-star");
-          star.style.left = Math.random() * 100 + "vw";
-          star.style.top = Math.random() * 100 + "vh";
-          body.appendChild(star);
-        }
 
         const triggerAnimation = () => {
           sections.forEach((section) => {
-            const sectionTop = section.getBoundingClientRect().top;
-            if (sectionTop < window.innerHeight - 100) {
+            if (section.getBoundingClientRect().top < window.innerHeight - 100) {
               section.classList.add("visible");
             }
           });
