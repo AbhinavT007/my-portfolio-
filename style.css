@@ -71,7 +71,7 @@ header {
 .profile-img:hover { transform: scale(1.04); }
 
 /* =======================
-   SECTIONS
+   CONTENT SECTIONS
 ======================= */
 .content-section {
     padding: 3rem 2rem 3.5rem;
@@ -96,12 +96,12 @@ header {
 }
 
 /* =======================
-   PROJECTS
+   PROJECTS CONTAINER
 ======================= */
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 160px; /* prevents overlap */
+    gap: 180px; /* prevents overlap between floating videos */
     flex-wrap: wrap;
     margin-top: 2rem;
 }
@@ -114,8 +114,8 @@ header {
     border-radius: 16px;
     box-shadow: 0 8px 20px #facd357c;
     width: 340px;
-    min-height: 420px;
-    padding: 28px;
+    min-height: 460px;
+    padding: 48px 28px;
     position: relative;
     overflow: visible;
     transition: box-shadow 0.27s, transform 0.27s;
@@ -126,7 +126,7 @@ header {
 }
 
 /* =======================
-   CENTER TEXT PERFECTLY
+   CENTER TEXT (PRIORITY)
 ======================= */
 .project-info {
     height: 100%;
@@ -135,7 +135,8 @@ header {
     justify-content: center;   /* vertical center */
     align-items: center;       /* horizontal center */
     text-align: center;
-    z-index: 1;
+    position: relative;
+    z-index: 10;               /* ALWAYS above video */
 }
 .project-info h3 {
     color: #ffd700;
@@ -151,11 +152,11 @@ header {
 ======================= */
 .project-video {
     position: absolute;
-    bottom: 30px;
-    z-index: 2;
+    bottom: -80px;  /* keeps video away from text */
+    z-index: 1;     /* below text */
 }
 
-/* Increased video size */
+/* Bigger but controlled video */
 .project-video video {
     width: 260px;
     border-radius: 16px;
@@ -163,7 +164,7 @@ header {
     transition: transform 0.3s;
 }
 
-/* Hover lift */
+/* Hover animation */
 .project-video video:hover {
     transform: scale(1.06);
 }
@@ -171,14 +172,14 @@ header {
 /* =======================
    VIDEO POSITIONING
 ======================= */
-/* Crypto Tracker → left */
+/* Crypto Tracker → LEFT */
 .project-card:nth-child(1) .project-video {
-    left: -130px;
+    left: -150px;
 }
 
-/* Chat Application → right */
+/* Chat Application → RIGHT */
 .project-card:nth-child(2) .project-video {
-    right: -130px;
+    right: -150px;
 }
 
 /* =======================
@@ -202,7 +203,7 @@ footer {
 }
 
 /* =======================
-   RESPONSIVE
+   RESPONSIVE (MOBILE)
 ======================= */
 @media (max-width: 768px) {
     .projects-container {
@@ -220,5 +221,6 @@ footer {
 
     .project-card {
         min-height: auto;
+        padding: 28px;
     }
 }
